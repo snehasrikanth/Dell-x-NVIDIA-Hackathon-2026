@@ -18,6 +18,7 @@ from recruit_assistant.validation import (
     validate_job_name,
     validate_resume_count,
     validate_resume_file,
+    validate_resume_path,
 )
 
 
@@ -122,6 +123,105 @@ async def create_job_intake(
     )
     _write_manifest(job)
     return job
+
+
+def create_job_intake_from_paths(
+    job_name: str,
+    job_description: str,
+    resume_paths: list[Path],
+    professional_research_consent: bool = False,
+) -> JobIntake:
+    """Same intake path as Streamlit/API, from local files for Slack/OpenClaw."""
+    validated_name = validate_job_name(job_name)
+    validated_description = validate_job_description(job_description)
+    paths = _collect_resume_paths(resume_paths)
+    validate_resume_count(paths)
+
+    job_id = str(uuid.uuid4())
+    created_at = utc_now_iso()
+    job_dir = _job_dir(job_id)
+    resumes_dir = job_dir / "resumes"
+    resumes_dir.mkdir(parents=True, exist_ok=True)
+
+    resume_records: list[ResumeRecord] = []
+    for source in paths:
+        content = source.read_bytes()
+        extension = validate_resume_path(source, content)
+        content_hash = hashlib.sha256(content).hexdigest()
+        resume_id = str(uuid.uuid4())
+        stored_filename = f"{resume_id}{extension}"
+        stored_path = resumes_dir / stored_filename
+        stored_path.write_bytes(content)
+
+        parsing_status = "complete"
+        parsing_error = None
+        extracted_text_path = None
+        extracted_text_hash = None
+        extracted_links: list[str] = []
+        try:
+            extracted_text = extract_resume_text(content, extension)
+            extracted_text_path = write_extracted_text(
+                job_dir, resume_id, extracted_text
+            )
+            extracted_text_hash = text_hash(extracted_text)
+            extracted_links = sorted(
+                set(extract_professional_links(extracted_text))
+                | set(extract_embedded_professional_links(content, extension))
+            )
+        except (ValueError, OSError) as exc:
+            parsing_status = "failed"
+            parsing_error = str(exc)
+
+        resume_records.append(
+            ResumeRecord(
+                resume_id=resume_id,
+                original_filename=source.name,
+                stored_filename=stored_filename,
+                content_type=None,
+                size_bytes=len(content),
+                content_hash=content_hash,
+                uploaded_at=utc_now_iso(),
+                parsing_status=parsing_status,
+                parsing_error=parsing_error,
+                text_path=extracted_text_path,
+                text_hash=extracted_text_hash,
+                extracted_links=extracted_links,
+            )
+        )
+
+    job = JobIntake(
+        job_id=job_id,
+        job_name=validated_name,
+        job_description=validated_description,
+        created_at=created_at,
+        resume_count=len(resume_records),
+        resumes=resume_records,
+        professional_research_consent=professional_research_consent,
+    )
+    _write_manifest(job)
+    return job
+
+
+def _collect_resume_paths(items: list[Path]) -> list[Path]:
+    from recruit_assistant.config import ALLOWED_RESUME_EXTENSIONS
+
+    paths: list[Path] = []
+    for item in items:
+        path = Path(item)
+        if path.is_dir():
+            paths.extend(
+                sorted(
+                    child
+                    for child in path.iterdir()
+                    if child.is_file()
+                    and child.suffix.lower() in ALLOWED_RESUME_EXTENSIONS
+                )
+            )
+        elif path.is_file():
+            paths.append(path)
+        else:
+            raise FileNotFoundError(f"Resume path does not exist: {item}")
+    return paths
 
 
 def get_job(job_id: str) -> JobIntake:

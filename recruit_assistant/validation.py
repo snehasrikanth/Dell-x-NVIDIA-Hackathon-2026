@@ -46,7 +46,33 @@ def validate_job_description(job_description: str) -> str:
     return description
 
 
-def validate_resume_count(resumes: list[UploadFile]) -> None:
+def validate_resume_path(path: Path, content: bytes) -> str:
+    filename = path.name
+    extension = path.suffix.lower()
+    if extension not in ALLOWED_RESUME_EXTENSIONS:
+        allowed = ", ".join(sorted(ALLOWED_RESUME_EXTENSIONS))
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=(
+                f"Unsupported file type for '{filename}'. "
+                f"Allowed extensions: {allowed}."
+            ),
+        )
+    if not content:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=f"File '{filename}' is empty.",
+        )
+    if len(content) > MAX_RESUME_BYTES:
+        max_mb = MAX_RESUME_BYTES // (1024 * 1024)
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=f"File '{filename}' exceeds the {max_mb} MB limit.",
+        )
+    return extension
+
+
+def validate_resume_count(resumes: list) -> None:
     count = len(resumes)
     if count < MIN_RESUMES:
         raise HTTPException(

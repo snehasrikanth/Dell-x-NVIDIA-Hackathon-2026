@@ -34,7 +34,12 @@ from recruit_assistant.storage import get_resume_text, write_research_run
 
 
 def run_research(job: JobIntake, request: ResearchRequest) -> ResearchRun:
-    if not request.consent_confirmed:
+    wants_web = (
+        request.use_candidate_provided_links
+        or request.discover_public_profiles
+        or bool(request.candidates)
+    )
+    if wants_web and not request.consent_confirmed:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail=(

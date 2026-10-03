@@ -718,3 +718,76 @@ def test_shortlist_selects_top_thirty_percent_with_ties() -> None:
         True,
         False,
     ]
+
+
+def test_screen_from_paths_scores_without_web_consent(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from recruit_assistant.cli import format_slack_report
+    from recruit_assistant.models import ResearchRequest, ResearchRun
+    from recruit_assistant.storage import create_job_intake_from_paths
+
+    jd = tmp_path / "jd.txt"
+    jd.write_text("Python is required.")
+    resume = tmp_path / "candidate.txt"
+    resume.write_text("Jordan built APIs with Python.")
+
+    monkeypatch.setattr(
+        "recruit_assistant.research.build_job_rubric",
+        lambda *_: JobRubric(
+            criteria=[
+                RubricCriterion(
+                    criterion_id="python",
+                    title="Python",
+                    description="Production Python",
+                    required=True,
+                    weight=100,
+                )
+            ],
+            model="test",
+        ),
+    )
+    monkeypatch.setattr(
+        "recruit_assistant.research.analyze_fit",
+        lambda *_: FitAnalysis(
+            status="complete",
+            route="advance_for_human_review",
+            summary="Python evidence is present.",
+            strengths=["Python APIs"],
+            unknowns=["LangGraph"],
+            decision=CandidateDecision(
+                evidence_score=91.0,
+                evidence_coverage=80,
+                required_criteria_met=1,
+                required_criteria_total=1,
+                fit_label="strong_role_alignment",
+                required_criteria_supported=True,
+                top_30_percent=True,
+                shortlist_rank=1,
+            ),
+        ),
+    )
+
+    from recruit_assistant.research import run_research
+
+    job = create_job_intake_from_paths(
+        "Backend Engineer",
+        jd.read_text(),
+        [resume],
+        professional_research_consent=False,
+    )
+    run = run_research(
+        job,
+        ResearchRequest(
+            consent_confirmed=False,
+            use_candidate_provided_links=False,
+            discover_public_profiles=False,
+        ),
+    )
+    report = format_slack_report(run, job.job_name)
+
+    assert isinstance(run, ResearchRun)
+    assert run.candidates[0].original_filename == "candidate.txt"
+    assert "91.0/100" in report
+    assert "Strong demonstrated alignment" in report
+    assert "LangGraph" in report

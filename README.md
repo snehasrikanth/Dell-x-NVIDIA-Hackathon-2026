@@ -120,20 +120,33 @@ curl -X POST http://127.0.0.1:8000/jobs/JOB_ID/research \
 Every fetched source records its URL, retrieval timestamp, filtered excerpt,
 content hash, retrieval status, and identity basis.
 
-## OpenClaw / NemoClaw tool
+## Slack / OpenClaw (same flow as Streamlit)
 
-The REST API can be registered as an OpenAPI tool. A CLI entry point is also
-available for OpenShell:
+`#hiring` should score a finished JD plus uploaded resumes. It should not
+rewrite the JD. The OpenClaw skill is `skills/resume-screener/SKILL.md`.
+
+From the repo root, this is the same pipeline as the Streamlit "research" button:
+
+```bash
+python -m recruit_assistant.cli screen \
+  --title "Senior Applied AI Scientist" \
+  --jd-file "/Users/snehasrikanth/hackathon/Test Resume/Senior_Applied_AI_Scientist_Job_Description.txt" \
+  --resumes "/Users/snehasrikanth/hackathon/Test Resume/Edge Cases" \
+  --consent-confirmed \
+  --format slack
+```
+
+In Slack, @Career Agent, attach the JD and resumes, and say the applicants
+were told their public GitHub/LinkedIn may be reviewed. The agent must run
+`cli screen` and paste the scores. Do not use `--discover` unless asked.
+
+Existing job-id research remains available:
 
 ```bash
 python -m recruit_assistant.cli research-job \
   --job-id JOB_ID \
   --consent-confirmed
 ```
-
-Connect that tool through the event's OpenClaw Slack, Discord, or Telegram
-connector. All model inference remains local; GitHub and LinkedIn access are
-explicit web-tool calls.
 
 Agent-Reach is an optional capability/diagnostic layer on the GB10:
 
