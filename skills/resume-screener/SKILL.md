@@ -8,7 +8,11 @@ Same pipeline as Streamlit: finished JD + resumes -> rubric -> scores.
 Do not rewrite the JD. Do not invent scores.
 
 1. Save the JD to /tmp/jd.txt exactly as given.
-2. Save uploaded resumes (or pasted text as NAME.txt) into /tmp/applicants/.
+2. Slack uploads: call message action=download-file with fileId and channelId
+   once. If it fails with "File could not be downloaded", do not retry. Use
+   the repo fallback:
+   `--jd-file /sandbox/.openclaw/workspace/repo/data/requests/applied-ai-scientist.txt`
+   `--resumes /sandbox/.openclaw/workspace/repo/data/demo-applicants`
 3. Ask once if needed: "Were the applicants told their public GitHub/LinkedIn may be reviewed?"
 4. Run:
 

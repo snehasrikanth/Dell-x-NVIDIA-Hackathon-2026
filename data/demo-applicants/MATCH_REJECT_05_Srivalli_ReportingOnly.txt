@@ -1,0 +1,26 @@
+SYNTHETIC TEST FIXTURE — contact details are from the source resume; work history is rewritten for scoring tests.
+SRIVALLI LANKA
++1 (331) 289-9444 | srivallilanka@gmail.com | Illinois, USA
+https://linkedin.com/in/srivallilanka | https://github.com/SrivalliLanka
+SUMMARY
+Reporting analyst with 4 years of Excel, PowerPoint, and weekly status-report experience. No software engineering, machine learning,
+RAG, or cloud AI product work.
+TECHNICAL SKILLS
+Excel, PowerPoint, Outlook, SharePoint, basic SQL extracts prepared by other teams. No Python, LangChain, LangGraph, Streamlit,
+Microsoft Fabric, Azure AI Foundry, Snowflake modeling, CTGAN, or Amazon Bedrock AgentCore.
+WORK EXPERIENCE
+Reporting Analyst — Operations Support Desk | Sep 2022 – Present
+
+Compiled weekly Excel trackers and PowerPoint slides from spreadsheets provided by other teams.
+
+Scheduled meetings and formatted status reports; did not design models, agents, pipelines, or data products.
+
+No ownership of RAG applications, synthetic-data evaluation, or cloud AI platforms.
+SELECTED PROJECTS
+
+Monthly attendance tracker in Excel.
+
+Slide template for weekly operations updates.
+EDUCATION
+B.Tech Electronics and Telematics.
+Expected result: sure-shot reject / insufficient demonstrated evidence against the Senior Applied AI Scientist JD.

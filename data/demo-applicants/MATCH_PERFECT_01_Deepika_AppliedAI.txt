@@ -1,0 +1,41 @@
+SYNTHETIC TEST FIXTURE — contact details are from the source resume; work history is rewritten for scoring tests.
+DEEPIKA KUBENDIRA RAO
++1 571-220-4035 | deepika.kubendirarao28@gmail.com | Arlington, VA
+https://linkedin.com/in/deepika-kubendirarao | https://github.com/deepikarao281199
+SUMMARY
+Senior Applied AI Scientist with 6+ years building production RAG applications, multi-agent systems, and reusable data products.
+Hands-on with LangChain, LangGraph, Streamlit, Azure AI Foundry, Microsoft Fabric, Snowflake, Power BI, and Amazon Bedrock
+AgentCore.
+TECHNICAL SKILLS
+Python, SQL, PyTorch, Pandas, NumPy, scikit-learn, CTGAN, LangChain, LangGraph, Streamlit, vector databases, Azure OpenAI,
+Azure AI Foundry, Microsoft Fabric, Snowflake, Power BI, Amazon Bedrock AgentCore, Docker, CI/CD.
+WORK EXPERIENCE
+Senior Applied AI Scientist — Northstar Analytics | Arlington, VA | Jan 2022 – Present
+
+Designed and deployed retrieval-augmented generation applications and AI agents using vector databases, LangChain, LangGraph,
+and Streamlit for document summarization and simulation-driven insights.
+
+Built end-to-end data and AI pipelines in Python and SQL on Microsoft Fabric, Azure AI Foundry, Azure services, Snowflake, and
+Power BI.
+
+Delivered a role-based multi-agent system with LLM-driven decisions, command validation, resilient fallbacks, tests, and deployment
+to Amazon Bedrock AgentCore.
+
+Generated and evaluated synthetic tabular data with CTGAN, PyTorch, Pandas, NumPy, and scikit-learn, reporting statistical fidelity,
+ML utility, and privacy metrics.
+
+Converted prototypes into reusable data products, interactive Streamlit apps, and executive-ready Power BI demonstrations.
+Applied AI Engineer — Zoho Corporation | Chennai, India | Jun 2019 – Dec 2021
+
+Implemented LLM-powered analysis and summarization workflows over enterprise operations data using Python, SQL, and Azure
+OpenAI.
+
+Owned testing, evaluation, and production handoff of agent prototypes used by internal analytics teams.
+SELECTED PROJECTS
+
+Multi-agent operations copilot on Amazon Bedrock AgentCore with LangGraph routing and Streamlit controls.
+
+CTGAN synthetic-data quality bench covering fidelity, utility, and privacy scores.
+EDUCATION
+M.S. Computer Science; B.E. Computer Science.
+Expected result: perfect match / advance for human review against the Senior Applied AI Scientist JD.

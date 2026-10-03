@@ -1,0 +1,27 @@
+SYNTHETIC TEST FIXTURE — HARD REQUIREMENT GAP / UNKNOWN EVIDENCE
+ Iker J. Perez Omar
+ Mechanical Engineering Graduate Student | Optimization & Robotics
+ Boston, MA | (470) 408-1915 | perezomar.i@northeastern.edu
+ https://www.linkedin.com/in/iker-j-perez
+PROFESSIONAL SUMMARY
+Engineer with 1 year of professional AI and engineering experience in optimization, simulation, robotics, and experimental research. Strong
+Python, C/C++, numerical methods, and genetic-algorithm experience; no demonstrated production experience with RAG, LangChain,
+LangGraph, vector databases, Microsoft Fabric, Azure AI Foundry, Snowflake, or Power BI.
+TECHNICAL SKILLS
+Software: Python, NumPy, SciPy, pandas, SQL, C/C++, STM32
+Engineering: Optimization, genetic algorithms, simulation, control theory, microcontrollers, numerical methods, experimental design
+AI Coursework: BCG AI Fluency, Google AI and Productivity, MIT Introduction to Generative AI
+PROFESSIONAL EXPERIENCE
+Delivery AI Product Intern — BCG X | Feb 2026 – Aug 2026
+  Owned optimization components for a genetic-algorithm scheduler across an oil-and-gas logistics network.
+  Reduced simulation runtime from 60 to 6 minutes through profiling and algorithmic restructuring.
+  Refined model constraints and conflict prediction, supporting unmet demand below 1% in the test scenario.
+ Undergraduate Research Team Leader — Georgia Tech M.A.R.S. VIP | Jan 2025 – May 2025
+  Led experimental research and built a wind tunnel that increased measured peak voltage by 124%.
+  Built an autonomous STM32 robot with I2C sensors and PID control.
+ 
+EDUCATION
+Northeastern University — MS Mechanical Engineering | Sep 2026 – Expected May 2028
+Universidad Carlos III de Madrid — BS Engineering Physics, GPA 9.42/10 | Sep 2022 – Jun 2026
+Georgia Institute of Technology — Physics Exchange Program, GPA 4.0/4.0 | Aug 2024 – May 2025
+Synthetic test fixture. Content is adapted solely to exercise application scoring paths and must not be used for an employment decision.

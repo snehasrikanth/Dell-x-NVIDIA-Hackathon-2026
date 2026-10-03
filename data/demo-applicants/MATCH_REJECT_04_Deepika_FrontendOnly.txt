@@ -1,0 +1,26 @@
+SYNTHETIC TEST FIXTURE — contact details are from the source resume; work history is rewritten for scoring tests.
+DEEPIKA KUBENDIRA RAO
++1 571-220-4035 | deepika.kubendirarao28@gmail.com | Arlington, VA
+https://linkedin.com/in/deepika-kubendirarao | https://github.com/deepikarao281199
+SUMMARY
+Frontend engineer with 4 years of experience building React and CSS interfaces. No professional data science, RAG, agent, cloud
+data-platform, or machine-learning product experience.
+TECHNICAL SKILLS
+JavaScript, TypeScript, React, HTML, CSS, Figma, Jest, Webpack. No Python ML, LangChain, LangGraph, Streamlit, Microsoft
+Fabric, Azure AI Foundry, Snowflake, Power BI, CTGAN, or Amazon Bedrock AgentCore.
+WORK EXPERIENCE
+Frontend Engineer — Consumer Apps Co. | Arlington, VA | May 2021 – Dec 2024
+
+Implemented responsive React and TypeScript UI features, design-system components, and client-side form validation.
+
+Improved page-load performance and accessibility; did not build RAG applications, AI agents, or data products.
+
+Collaborated with designers on CSS and component library work only.
+SELECTED PROJECTS
+
+Personal portfolio website in React.
+
+UI clone of a shopping cart checkout flow.
+EDUCATION
+B.E. Computer Science.
+Expected result: sure-shot reject / insufficient demonstrated evidence against the Senior Applied AI Scientist JD.

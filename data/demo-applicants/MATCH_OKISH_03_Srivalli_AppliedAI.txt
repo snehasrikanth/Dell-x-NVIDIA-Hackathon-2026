@@ -1,0 +1,29 @@
+SYNTHETIC TEST FIXTURE — contact details are from the source resume; work history is rewritten for scoring tests.
+SRIVALLI LANKA
++1 (331) 289-9444 | srivallilanka@gmail.com | Illinois, USA
+https://linkedin.com/in/srivallilanka | https://github.com/SrivalliLanka
+SUMMARY
+Data scientist and analyst with 3 years of professional experience in Python, SQL, RAG prototypes, Snowflake, and Power BI. Strong
+applied analytics, but limited production agent, Fabric, and synthetic-data evidence.
+TECHNICAL SKILLS
+Python, SQL, Pandas, NumPy, scikit-learn, Hugging Face, Chroma, Azure OpenAI, Snowflake, AWS, Power BI, Docker, CI/CD.
+Limited or no production evidence for LangGraph, Microsoft Fabric, Azure AI Foundry, CTGAN, or Amazon Bedrock AgentCore.
+WORK EXPERIENCE
+Research Assistant, Data Science — University of Illinois Urbana-Champaign | May 2025 – Present
+
+Built an internal RAG prototype using document chunking, embeddings, and vector search over rail-safety reports.
+
+Used Python and SQL for statistical modeling and stakeholder summaries; no LangGraph or Bedrock AgentCore deployment.
+Analyst — Deloitte | Sep 2022 – Aug 2024
+
+Created Python/SQL ETL, Snowflake-adjacent analytics, and Power BI dashboards for operational monitoring.
+
+Did not own multi-agent systems, CTGAN synthetic-data evaluation, or Microsoft Fabric/Azure AI Foundry products.
+SELECTED PROJECTS
+
+Healthcare billing RAG chatbot with Chroma, Hugging Face embeddings, and Azure OpenAI.
+
+Student-performance ML pipeline in Python with Docker and GitHub Actions.
+EDUCATION
+M.S. Information Management, University of Illinois; B.Tech Electronics and Telematics.
+Expected result: okish / potential alignment. Some AI and data evidence, but required agent, Fabric, CTGAN, and AgentCore criteria remain incomplete.

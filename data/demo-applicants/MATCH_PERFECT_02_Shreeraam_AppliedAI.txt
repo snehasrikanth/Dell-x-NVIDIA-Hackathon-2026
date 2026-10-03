@@ -1,0 +1,37 @@
+SYNTHETIC TEST FIXTURE — contact details are from the source resume; work history is rewritten for scoring tests.
+SHREERAAM RAMACHANDRAN
+(857) 361-6996 | ramachandran.shr@northeastern.edu | Buffalo, NY
+https://linkedin.com/in/shreeraamr | https://github.com/SHREERAAM-sys
+SUMMARY
+Applied AI and backend engineer with 6+ years shipping intelligent agents, RAG systems, and cloud data products. Production
+experience across LangChain, LangGraph, Streamlit, Microsoft Fabric, Azure AI Foundry, Snowflake, Power BI, and Amazon Bedrock
+AgentCore.
+TECHNICAL SKILLS
+Python, SQL, Java, PyTorch, Pandas, NumPy, scikit-learn, CTGAN, LangChain, LangGraph, Streamlit, pgvector, Azure AI Foundry,
+Microsoft Fabric, Snowflake, Power BI, Amazon Bedrock AgentCore, AWS, Docker, Terraform.
+WORK EXPERIENCE
+Senior Applied AI Engineer — Walmart Checkout Intelligence | Sunnyvale, CA | Feb 2023 – Present
+
+Built RAG and agent workflows with LangChain, LangGraph, Streamlit, and vector search for checkout incident analysis and
+document summarization.
+
+Implemented Python/SQL pipelines on Microsoft Fabric, Azure AI Foundry, Snowflake, and Power BI for reusable analytics products.
+
+Designed a role-based multi-agent system with LLM decisions, fallback behavior, command validation, automated tests, and Amazon
+Bedrock AgentCore deployment.
+
+Created CTGAN synthetic transaction tables and evaluated fidelity, machine-learning utility, and privacy leakage with PyTorch and
+scikit-learn.
+Software Development Engineer — Zoho Corporation | Chennai, India | Jan 2020 – Jan 2023
+
+Delivered LLM-assisted identity insights and production Python services used by analytics and IAM teams.
+
+Converted internal prototypes into documented, reusable data products and stakeholder demonstrations.
+SELECTED PROJECTS
+
+Search 2.0 RAG CLI using FastAPI, pgvector, LangChain, and AWS Fargate.
+
+Synthetic-data evaluation notebook covering CTGAN fidelity, utility, and privacy.
+EDUCATION
+M.S. Information Systems, Northeastern University; B.E. Computer Science.
+Expected result: perfect match / advance for human review against the Senior Applied AI Scientist JD.

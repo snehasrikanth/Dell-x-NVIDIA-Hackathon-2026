@@ -1,0 +1,35 @@
+SYNTHETIC TEST FIXTURE — ADJACENT / PARTIAL MATCH
+ Arunkumar Muthusamy
+ Senior Software Engineer | Backend & Data Engineering
+ Buffalo, NY | +1-716-939-9968 | arunmuthu.ns@gmail.com
+ https://linkedin.com/in/arun-muthu-ns
+PROFESSIONAL SUMMARY
+Software engineer with 7+ years of professional software engineering experience building backend services, event-driven systems, and
+data processing workflows. Built limited prototype applications for RAG search and LLM document summarization, but has not deployed
+production generative AI or multi-agent systems. Strong adjacent experience in Python, Apache Spark, AWS, and distributed systems.
+TECHNICAL SKILLS
+Languages: Java, Python, SQL, Rust, JavaScript, R
+Backend & Data: Spring Boot, Spring WebFlux, REST APIs, Kafka, MongoDB, Apache Spark, PySpark, Apache Airflow
+Cloud & Delivery: AWS EMR, S3, Athena, Glue, Lambda, EC2, SQS, SNS, Docker, Kubernetes, Jenkins, Terraform
+PROFESSIONAL EXPERIENCE
+Software Engineer Intern — Tarka Labs | Jun 2022 – Aug 2022
+  Integrated Slack OAuth, JWT, Rust, and React, reducing user-authentication management effort by 50%.
+ Senior Software Engineer — Sahaj Software Solutions | May 2019 – Jul 2021
+  Designed Java and Spring WebFlux facade services across Salesforce instances and built low-latency CometD event processing.
+  Built an end-to-end data and AI pipeline using Python, SQL, Airflow, Apache Spark, and AWS EMR; increased existing service test
+ coverage to 90%.
+ Built event-driven REST microservices with Java, Spring Boot, MongoDB, and Kafka.
+ Member of Technical Staff — Zoho Corporation | Jun 2016 – May 2019
+  Led report-feature development using Java, Apache Struts, and MySQL and mentored a software engineering team.
+ 
+RELEVANT PROJECTS
+ Course Recommendation System — Developed a PySpark KNN recommendation analysis reporting 70% accuracy.
+ Market Basket Analysis — Performed RFM segmentation and Apriori recommendations in R with a Shiny dashboard.
+ Prototype RAG Search — Built a classroom retrieval-augmented generation prototype using Python, FAISS vector search, and Streamlit;
+ not deployed to production.
+LLM Document Summarizer — Built a limited Python prototype that used an LLM to summarize documents; no production monitoring or
+ deployment.
+EDUCATION
+State University of New York at Buffalo — Master in Data Science | Aug 2021 – Dec 2022
+Jeppiaar Engineering College, Anna University — Bachelor of Technology in Information Technology | Aug 2012 – May 2016
+Synthetic test fixture. Content is adapted solely to exercise application scoring paths and must not be used for an employment decision.

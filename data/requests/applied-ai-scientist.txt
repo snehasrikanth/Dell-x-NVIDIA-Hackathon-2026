@@ -1,0 +1,38 @@
+Senior Applied AI Scientist — Intelligent Agents and Data Products
+
+ROLE OVERVIEW
+
+We are seeking a Senior Applied AI Scientist to design and deliver intelligent agents, generative AI applications, and reusable data products. The role combines hands-on AI engineering, data science, cloud data platforms, interactive application development, and clear communication with business stakeholders.
+
+REQUIRED QUALIFICATIONS
+
+All qualifications below are required:
+
+1. 3+ years of professional experience building data science, artificial intelligence, or machine-learning solutions.
+
+2. Demonstrated experience designing and deploying retrieval-augmented generation (RAG) applications and AI agents using vector databases, LangChain, LangGraph, and Streamlit.
+
+3. Demonstrated experience implementing LLM-powered or generative AI solutions for data analysis, document summarization, and simulation-driven insights.
+
+4. Demonstrated experience building end-to-end data and AI pipelines using Python, SQL, Microsoft Fabric, Azure AI Foundry, Azure services, Snowflake, and Power BI.
+
+5. Demonstrated project experience building role-based multi-agent systems with LLM-driven decisions, resilient fallback behavior, command validation, testing, and deployment to Amazon Bedrock AgentCore.
+
+6. Demonstrated project experience generating and evaluating synthetic tabular data using CTGAN, Python, PyTorch, Pandas, NumPy, and scikit-learn, including statistical-fidelity, machine-learning-utility, and privacy evaluation.
+
+7. Demonstrated ability to convert prototypes into scalable, reusable data products, interactive applications, dashboards, or executive-ready demonstrations.
+
+RESPONSIBILITIES
+
+- Design, build, and evaluate RAG applications, intelligent agents, and generative AI workflows.
+- Develop Python and SQL pipelines that integrate enterprise data from lakes, warehouses, and cloud services.
+- Build user-friendly Streamlit applications and Power BI dashboards.
+- Develop reusable data products using Microsoft Fabric, Azure AI Foundry, Snowflake, and Azure services.
+- Prototype and test multi-agent workflows, including validation, error recovery, and safe fallback behavior.
+- Apply statistical and machine-learning methods to assess model and synthetic-data quality.
+- Translate technical prototypes into reliable solutions and communicate results through clear demonstrations and data storytelling.
+- Collaborate with engineering, product, and business stakeholders while documenting technical decisions and limitations.
+
+EDUCATION
+
+Master’s degree in Computer Science, Data Science, Artificial Intelligence, or a closely related field.

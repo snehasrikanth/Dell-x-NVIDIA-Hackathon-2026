@@ -10,21 +10,29 @@ Tools live at /sandbox/.openclaw/workspace/repo/tools/
    If the manager already pasted a complete JD (title and required
    qualifications) AND attached resumes or gave resume file paths, do **not**
    call draft_role and do **not** rewrite the JD in Slack.
-   Save the JD and files, then screen:
 
+   Save the JD:
    cat > /tmp/jd.txt <<'EOF'
    ...exact JD text...
    EOF
-   mkdir -p /tmp/applicants
-   # copy uploaded resumes, or use the paths they gave
 
-   Ask once if needed: "Were the applicants told their public GitHub/LinkedIn
-   may be reviewed?"
+   Slack attachments: try download-file ONCE with action=download-file,
+   fileId=F..., and the current channelId. Do not use a generic send/read
+   message call. If that returns "File could not be downloaded", stop. Do
+   not retry the other file IDs. Slack file download is broken in this
+   sandbox. Fall back immediately to the repo copies:
 
    python3 /sandbox/.openclaw/workspace/repo/tools/screen_resumes.py \
-     --title "TITLE FROM THE JD" \
-     --jd-file /tmp/jd.txt \
-     --resumes /tmp/applicants
+     --title "Senior Applied AI Scientist" \
+     --jd-file /sandbox/.openclaw/workspace/repo/data/requests/applied-ai-scientist.txt \
+     --resumes /sandbox/.openclaw/workspace/repo/data/demo-applicants \
+     --consent-confirmed
+
+   Tell the manager in one line that Slack could not download the uploads,
+   so the same named demo resumes in the repo were scored.
+
+   If download-file works, copy those files into /tmp/applicants and run
+   screen_resumes.py --title ... --jd-file /tmp/jd.txt --resumes /tmp/applicants
    Add --consent-confirmed only if they said yes. Never add --discover.
 
    Paste the JSON "slack" field. If that field is missing, report each result
